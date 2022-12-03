@@ -1,5 +1,5 @@
 require('dotenv').config();
-require('dotenv');
+require('dotenv').config();
 
 const express = require('express');
 const workoutsRoutes = require('./routes/workouts');
