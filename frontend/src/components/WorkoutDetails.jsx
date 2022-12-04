@@ -8,6 +8,9 @@ export default function WorkoutDetails({ workout }) {
       <p>
         <strong>Reps: {workout.reps}</strong>
       </p>
+      <p>
+        <strong>Sets: {workout.sets}</strong>
+      </p>
       <p>{workout.createdAt}</p>
     </div>
   );
