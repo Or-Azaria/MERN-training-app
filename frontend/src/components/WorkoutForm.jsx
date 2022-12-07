@@ -10,26 +10,25 @@ export default function WorkoutForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const workout = { title, load, reps };
+    const workout = { title, load, reps, sets };
 
-    const res = await fetch('/api/workouts', {
+    const response = await fetch('/api/workouts', {
       method: 'POST',
       body: JSON.stringify(workout),
       headers: {
-        'content-type': 'application/json',
+        'Content-Type': 'application/json',
       },
     });
-    const json = await res.json();
+    const json = await response.json();
 
-    if (!res.ok) {
+    if (!response.ok) {
       setError(json.error);
     }
-    if (res.ok) {
+    if (response.ok) {
       setTitle('');
       setLoad('');
       setReps('');
       setSets('');
-
       setError(null);
       console.log('New Workout added');
     }
@@ -68,6 +67,7 @@ export default function WorkoutForm() {
       />
 
       <button>Add Workout</button>
+      {error && <div className="error">{error}</div>}
     </form>
   );
 }
