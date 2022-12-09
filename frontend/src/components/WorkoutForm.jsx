@@ -5,7 +5,7 @@ export default function WorkoutForm() {
   const [load, setLoad] = useState('');
   const [reps, setReps] = useState('');
   const [sets, setSets] = useState('');
-  const [error, setError] = useState(null);
+  const [err, setErr] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,14 +22,15 @@ export default function WorkoutForm() {
     const json = await response.json();
 
     if (!response.ok) {
-      setError(json.error);
+      setErr(json.err);
     }
     if (response.ok) {
       setTitle('');
       setLoad('');
       setReps('');
       setSets('');
-      setError(null);
+      setErr(null);
+
       console.log('New Workout added');
     }
   };
@@ -67,7 +68,7 @@ export default function WorkoutForm() {
       />
 
       <button>Add Workout</button>
-      {error && <div className="error">{error}</div>}
+      {err && <div className="error">{err}</div>}
     </form>
   );
 }
