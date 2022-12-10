@@ -36,7 +36,6 @@ export default function WorkoutForm() {
       setSets('');
       setErr(null);
       setEmptyFields([]);
-      console.log('New Workout added', json);
       dispatch({ type: 'CREATE_WORKOUT', payload: json });
     }
   };
