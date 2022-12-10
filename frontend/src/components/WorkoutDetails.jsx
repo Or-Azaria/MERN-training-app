@@ -1,4 +1,8 @@
 import { useWorkoutsContext } from '../hooks/useWorkoutsContext';
+import DeleteOutlineOutlined from '@mui/icons-material/DeleteOutlineOutlined';
+
+// DATE info
+import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 
 export default function WorkoutDetails({ workout }) {
   const { dispatch } = useWorkoutsContext();
@@ -7,7 +11,7 @@ export default function WorkoutDetails({ workout }) {
     const res = await fetch('/api/workouts/' + workout._id, {
       method: 'DELETE',
     });
-    const json = res.json();
+    const json = await res.json();
 
     if (res.ok) {
       dispatch({ type: 'DELETE_WORKOUT', payload: json });
@@ -26,8 +30,12 @@ export default function WorkoutDetails({ workout }) {
       <p>
         <strong>Sets: {workout.sets}</strong>
       </p>
-      <p>{workout.createdAt}</p>
-      <span onClick={handleClick}>Delete</span>
+      <p>
+        {formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}
+      </p>
+      <span onClick={handleClick}>
+        <DeleteOutlineOutlined />
+      </span>
     </div>
   );
 }

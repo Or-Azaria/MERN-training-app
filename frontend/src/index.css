@@ -77,9 +77,12 @@ header a {
   right: 20px;
   cursor: pointer;
   background: #f1f1f1;
-  padding: 6px;
-  border-radius: 50%;
-  color: #333
+  padding: 6px 4px 2px 4px;
+  border-radius: 100px;
+  color: rgba(227, 46, 46, 0.742)
+}
+.workout-details span:hover{
+  color: rgba(192, 185, 185, 0.742)
 }
 
 /* // new workoutForm // */
