@@ -27,7 +27,7 @@ header .container {
 
 header .container h1 {
   color: white;
-  background-color: rgba(85, 85, 85, 0.495);
+  background-color: rgba(85, 85, 85, 0.734);
   border-radius: 5px;
   padding: 10px;
 }
@@ -81,7 +81,8 @@ header a {
   border-radius: 100px;
   color: rgba(227, 46, 46, 0.742)
 }
-.workout-details span:hover{
+
+.workout-details span:hover {
   color: rgba(192, 185, 185, 0.742)
 }
 
