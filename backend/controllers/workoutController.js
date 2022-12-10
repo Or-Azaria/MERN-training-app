@@ -40,17 +40,17 @@ createWorkout = async (req, res) => {
   if (!load) {
     emptyFields.push('load');
   }
-  if (!sets) {
-    emptyFields.push('sets');
-  }
   if (!reps) {
     emptyFields.push('reps');
+  }
+  if (!sets) {
+    emptyFields.push('sets');
   }
 
   if (emptyFields.length > 0) {
     return res
       .status(400)
-      .json({ mssg: 'Pleas fill in the fields', emptyFields });
+      .json({ err: 'Pleas fill in the fields', emptyFields });
   }
 
   // add doc to db
