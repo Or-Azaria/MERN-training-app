@@ -9,20 +9,7 @@ const userSchema = new Schema(
       required: true,
       unique: true,
     },
-    reps: {
-      type: Number,
-      required: true,
-    },
-    sets: {
-      type: Number,
-      required: true,
-    },
-    load: {
-      type: Number,
-      required: true,
-    },
-  },
-  { timestamps: true }
+  }
 );
 
 module.exports = mongoose.model('Workout', userSchema);
