@@ -13,7 +13,7 @@ export const Login = () => {
   return (
     <form className="login" onSubmit={handleSubmit}>
       <h3>Log in</h3>
-      <label>email:</label>
+      <label>Email:</label>
       <input
         type="email"
         onChange={(e) => setEmail(e.target.value)}
