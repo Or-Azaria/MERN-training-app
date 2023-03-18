@@ -1,12 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;500;700;900&display=swap");
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
+/* layout */
 :root {
   --primary: #1aac83;
-  --error: #e71951;
+  --error: #e7195a;
 }
 
 body {
-  background-color: rgb(249, 243, 243);
+  background: #f1f1f1;
   margin: 0;
   font-family: "Poppins";
 }
@@ -14,10 +16,11 @@ body {
 header {
   background-image: url("https://i.pinimg.com/474x/86/21/7a/86217a7980b0e9c6dd05be7826301241.jpg");
   background-position: center;
+  aspect-ratio: 6/0.4;
 }
 
 header .container {
-  max-width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 10px 20px;
   display: flex;
@@ -25,33 +28,27 @@ header .container {
   justify-content: space-between;
 }
 
-header .container h1 {
-  color: white;
-  background-color: rgba(85, 85, 85, 0.734);
-  border-radius: 5px;
-  padding: 10px;
-}
-
 header a {
-  color: #333;
+  color: #fff;
+  font-weight: 600;
   text-decoration: none;
 }
 
 .pages {
-  max-width: 100%;
+  max-width: 1400px;
   padding: 20px;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
-/*  homepage  */
+/* homepage */
 .home {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: 100px
+  gap: 100px;
 }
 
 .workout-details {
-  background: rgb(255, 255, 255);
+  background: #fff;
   border-radius: 4px;
   margin: 20px auto;
   padding: 20px;
@@ -77,16 +74,12 @@ header a {
   right: 20px;
   cursor: pointer;
   background: #f1f1f1;
-  padding: 6px 4px 2px 4px;
-  border-radius: 100px;
-  color: rgba(227, 46, 46, 0.742)
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
 }
 
-.workout-details span:hover {
-  color: rgba(192, 185, 185, 0.742)
-}
-
-/* // new workoutForm // */
+/* new workout form */
 label,
 input {
   display: block;
@@ -99,8 +92,6 @@ input {
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.669);
-  outline: none;
   box-sizing: border-box;
 }
 
@@ -114,11 +105,6 @@ form button {
   cursor: pointer;
 }
 
-form button:hover {
-  background: #48b697;
-}
-
-
 div.error {
   padding: 10px;
   background: #ffefef;
@@ -130,4 +116,24 @@ div.error {
 
 input.error {
   border: 1px solid var(--error);
+}
+
+/* navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 10px;
+}
+
+/* auth forms */
+form.signup,
+form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
 }
