@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const Signup = () => {
+const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -29,3 +29,5 @@ export const Signup = () => {
     </form>
   );
 };
+
+export default Signup;
