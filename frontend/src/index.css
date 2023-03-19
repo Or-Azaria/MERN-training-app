@@ -16,7 +16,7 @@ body {
 header {
   background-image: url("https://i.pinimg.com/474x/86/21/7a/86217a7980b0e9c6dd05be7826301241.jpg");
   background-position: center;
-  aspect-ratio: 6/0.4;
+  aspect-ratio: 6/0.5;
 }
 
 header .container {
@@ -30,8 +30,16 @@ header .container {
 
 header a {
   color: #fff;
+  background-color: #1aac83c4;
+  border-radius: 15px;
+  padding: 5px;
   font-weight: 600;
   text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+header a:hover {
+  background-color: #333333b7;
 }
 
 .pages {
