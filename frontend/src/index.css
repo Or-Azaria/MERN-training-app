@@ -105,7 +105,7 @@ input {
 
 form button {
   background: var(--primary);
-  border: 0;
+  border: 10;
   color: #fff;
   padding: 10px;
   font-family: "Poppins";
