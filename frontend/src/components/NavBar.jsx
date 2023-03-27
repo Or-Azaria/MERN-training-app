@@ -19,7 +19,7 @@ export default function NavBar() {
             <button onClick={handleClick}>Log out</button>
           </div>
           <div>
-            <Link to="/login">Login</Link>
+            <Link to="/login">Loin</Link>
             <Link to="/signup">Signup</Link>
           </div>
         </nav>
