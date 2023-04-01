@@ -19,7 +19,7 @@ const Login = () => {
         onChange={(e) => setEmail(e.target.value)}
         value={email}
       />
-      <label>Password</label>
+      <label>Password:</label>
       <input
         type="password"
         onChange={(e) => setPassword(e.target.value)}
