@@ -52,7 +52,7 @@ export default function WorkoutForm() {
         className={emptyFields.includes('title') ? 'error' : ''}
       />
 
-      <label>Load (inkg):</label>
+      <label>Load (in kg):</label>
       <input
         type="number"
         onChange={(e) => setLoad(e.target.value)}
