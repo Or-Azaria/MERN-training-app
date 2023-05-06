@@ -44,7 +44,7 @@ export default function WorkoutForm() {
     <form className="create" onSubmit={handleSubmit}>
       <h3>Add a new workout</h3>
 
-      <label>Exercise Title:</label>
+      <label>Exercise :</label>
       <input
         type="text"
         onChange={(e) => setTitle(e.target.value)}
