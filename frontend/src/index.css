@@ -14,9 +14,7 @@ body {
 }
 
 header {
-  background-image: url("https://i.pinimg.com/474x/86/21/7a/86217a7980b0e9c6dd05be7826301241.jpg");
-  background-position: center;
-  aspect-ratio: 6/0.5;
+  background-color: #1aac83;
 }
 
 header .container {
@@ -141,6 +139,7 @@ nav button {
   color: var(--primary);
   border: 2px solid var(--primary);
   padding: 6px 10px;
+  margin-left: 10px;
   border-radius: 4px;
   font-family: "poppins";
   cursor: pointer;
