@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
-const user = require('../models/userModel');
+const User = require('../models/userModel');
 
-const requireAuth = (req, res, next) => {
+const requireAuth = async (req, res, next) => {
   // verify authentication
   const { authorization } = req.headers;
 
@@ -13,9 +13,12 @@ const requireAuth = (req, res, next) => {
   try {
     const { _id } = jwt.verify(token, process.env.SECRET);
 
-    req.user = await;
+    req.user = await User.findOne({ _id }).select('_id');
+    next();
   } catch (error) {
     console.log(error);
     res.status(401).json({ error: 'Request is not authorized' });
   }
 };
+
+module.exports = requireAuth;
