@@ -1,4 +1,7 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigateß } from 'react-router-dom';
+import { useAuthContext } from './hooks/useAuthContext';
+
+// pages & components
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
