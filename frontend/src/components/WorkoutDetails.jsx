@@ -34,7 +34,7 @@ export default function WorkoutDetails({ workout }) {
         <strong>Load (kg): {workout.load}</strong>
       </p>
       <p>
-        <strong>Reps: {workout.reps}</strong>
+        <strong>Reps {workout.reps}</strong>
       </p>
       <p>
         <strong>Sets:{workout.sets}</strong>
