@@ -37,7 +37,7 @@ export default function WorkoutDetails({ workout }) {
         <strong>Reps {workout.reps}</strong>
       </p>
       <p>
-        <strong>Sets {workout.sets}</strong>
+        <strong>Sets: {workout.sets}</strong>
       </p>
       <p>
         {formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}
