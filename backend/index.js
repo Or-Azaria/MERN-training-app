@@ -5,15 +5,6 @@ const mongoose = require('mongoose');
 const workoutsRoutes = require('./routes/workouts');
 const userRoutes = require('./routes/user');
 
-//------------------------------------------------------------//
-//TO GENERATE A SECRET KEY
-// var generator = require('generate-password');
-// var password = generator.generate({
-//   length: 50,
-//   numbers: true,
-// });
-// console.log(password);
-//------------------------------------------------------------//
 //express app
 const app = express();
 
