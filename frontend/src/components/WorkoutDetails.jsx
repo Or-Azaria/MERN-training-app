@@ -17,7 +17,7 @@ export default function WorkoutDetails({ workout }) {
     const res = await fetch('/api/workouts/' + workout._id, {
       method: 'DELETE',
       headers: {
-        Authorization: `Bearer ${user.token}`,
+        'Authorization': `Bearer ${user.token}`,
       },
     });
     const json = await res.json();
