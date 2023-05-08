@@ -31,7 +31,7 @@ export default function WorkoutDetails({ workout }) {
     <div className="workout-details">
       <h4>{workout.title}</h4>
       <p>
-        <strong>Load: (kg): {workout.load}</strong>
+        <strong>Load (kg): {workout.load}</strong>
       </p>
       <p>
         <strong>Reps: {workout.reps}</strong>
