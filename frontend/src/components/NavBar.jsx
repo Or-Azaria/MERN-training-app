@@ -19,7 +19,7 @@ export default function NavBar() {
           {user && (
             <div>
               <span>{user.email}</span>
-              <button onClick={handleClick}>Log out</button>
+              <button onClick={handleClick}>Log ut</button>
             </div>
           )}
           {!user && (
